@@ -26,5 +26,5 @@ Note: Implement your own algorithm. Don't use any library function other than on
 Run commands:
 1) gcc Answer1.c -lGL -lGLU -lglut
 2) gcc Answer2.c -lGL -lGLU -lglut
-3) gcc Answer3a.c -lGL -lGLU -lglut -lm
-4) gcc Answer3b.c -lGL -lGLU -lglut -lm
+3)(a) gcc Answer3a.c -lGL -lGLU -lglut -lm
+  (b)gcc Answer3b.c -lGL -lGLU -lglut -lm
