@@ -33,6 +33,8 @@ gcc Answer3a.c -lGL -lGLU -lglut -lm</br>
 ./a.out</br>
 gcc Answer3b.c -lGL -lGLU -lglut -lm</br>
 ./a.out</br>
+gcc Answer4.c -lGL -lGLU -lglut -lm</br>
+./a.out</br>
 gcc Answer5.c -lGL -lGLU -lglut</br>
 ./a.out</br>
 gcc Answer7.c -lGL -lGLU -lglut</br>
