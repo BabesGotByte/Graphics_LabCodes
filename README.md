@@ -37,7 +37,9 @@ gcc Answer4.c -lGL -lGLU -lglut -lm</br>
 ./a.out</br>
 gcc Answer5.c -lGL -lGLU -lglut</br>
 ./a.out</br>
-gcc Answer7.c -lGL -lGLU -lglut</br>
+g++ Answer7.cpp -lGL -lGLU -lglut</br>
 ./a.out</br>
-gcc Answer10.c -lGL -lGLU -lglut</br>
+g++ Answer8.cpp -lGL -lGLU -lglut</br>
+./a.out</br>
+g++ Answer10.cpp -lGL -lGLU -lglut</br>
 ./a.out</br>
