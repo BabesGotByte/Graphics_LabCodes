@@ -23,8 +23,4 @@ Note: Implement your own algorithm. Don't use any library function other than on
 10. Write a program to implement a 3D fractal tree. Color of tree can be changed by pressing first letter of common colors(Red,Blue,Green,Yellow..). Use mouse movement to rotate tree along Y axis(on XZ plane). </br>
 
 
-Run commands:
-1. gcc Answer1.c -lGL -lGLU -lglut</br>
-2. gcc Answer2.c -lGL -lGLU -lglut</br>
-3.(a) gcc Answer3a.c -lGL -lGLU -lglut -lm</br>
-3.(b) gcc Answer3b.c -lGL -lGLU -lglut -lm</br>
+
