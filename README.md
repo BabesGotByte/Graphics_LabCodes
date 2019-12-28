@@ -37,3 +37,5 @@ gcc Answer5.c -lGL -lGLU -lglut</br>
 ./a.out</br>
 gcc Answer7.c -lGL -lGLU -lglut</br>
 ./a.out</br>
+gcc Answer10.c -lGL -lGLU -lglut</br>
+./a.out</br>
