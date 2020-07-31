@@ -23,6 +23,8 @@ We have covered the following algorithms:
 * Animations (Animated swing)
 * Bezier Algorithm (Draw shapes like flowers, cylinder)
 * Fractals (3-D fractal tree)
+
+
 ![](https://img.shields.io/badge/Graphics-Computing-orange.svg)
 ![](https://img.shields.io/badge/Language-C++-blue.svg)
 ![](https://img.shields.io/badge/Library-OpenGL-green.svg)
