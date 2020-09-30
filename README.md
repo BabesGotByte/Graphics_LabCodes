@@ -3,7 +3,7 @@
 [![Generic badge](https://img.shields.io/badge/VISUAL-COMPUTING-<BLUE>.svg)](https://shields.io/)
 [![Generic badge](https://img.shields.io/badge/Language-C++-<BLUE>.svg)](https://shields.io/)
 
-Graphics & Visual Computing Lab Codes
+Graphics & Visual Computing Lab's Codes 
 
 Command to compile the code
 gcc test.c -lGL -lGLU -lglut
@@ -15,8 +15,8 @@ We have tried not use any library function other than one to draw a point.
 ## Techniques and Algorithms Covered:
 
 We have covered the following algorithms:
-* Bresenham
 * DDA (Line Generation)
+* Bresenham
 * Circle Generation Algorithms
 * Draw shapes: Pentagon, Cone etc
 * Coloring Algoriths (flood-fill, boundary-fill)
@@ -54,7 +54,7 @@ Some generic GVC codes are present in the Extra_Codes directory, apart from them
 
 ## Instructions to run:
 We need to run the files using gcc/g++ using some extra parameters while passing to the gcc compiler.
-Run the following commands for the respective files:
+Run the following commands for the respective files
 
 gcc Answer1.c -lGL -lGLU -lglut </br>
 ./a.out</br>
@@ -68,7 +68,7 @@ g++ Answer10.cpp -lGL -lGLU -lglut</br>
 ### About OpenGL:
 The OpenGL Utility Toolkit is a library of utilities for OpenGL programs, which primarily perform system-level I/O with the host operating system. Functions performed include window definition, window control, and monitoring of keyboard and mouse input.
 
-Routines for drawing a number of geometric primitives (both in solid and wireframe mode) are also provided, including cubes, spheres and the Utah teapot. GLUT also has some limited support for creating pop-up menus.
+Routines for drawing a number of geometric primitives (both in solid and wireframe mode) are also provided, including cubes, spheres and the Utah teapot. GLUT also has some limited support for creating pop-up menus
 
 
 [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/Naereen/)
