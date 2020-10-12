@@ -1,36 +1,4 @@
-# Graphics_LabCodes
-[![Generic badge](https://img.shields.io/badge/GRAPHICS-LAB-BLUE.svg)](https://shields.io/)
-[![Generic badge](https://img.shields.io/badge/VISUAL-COMPUTING-<BLUE>.svg)](https://shields.io/)
-[![Generic badge](https://img.shields.io/badge/Language-C++-<BLUE>.svg)](https://shields.io/)
-
-Graphics & Visual Computing Lab's Codes 
-
-Command to compile the code
-gcc test.c -lGL -lGLU -lglut
-
-We have tried not use any library function other than one to draw a point.
-
-#include <GL/glut.h>
-
-## Techniques and Algorithms Covered:
-
-We have covered the following algorithms:
-* DDA (Line Generation)
-* Bresenham
-* Circle Generation Algorithms
-* Draw shapes: Pentagon, Cone etc
-* Coloring Algoriths (flood-fill, boundary-fill)
-* Animations (Animated swing)
-* Bezier Algorithm (Draw shapes like flowers, cylinder)
-* Fractals (3-D fractal tree)
-
-
-![](https://img.shields.io/badge/Graphics-Computing-orange.svg)
-![](https://img.shields.io/badge/Language-C++-blue.svg)
-![](https://img.shields.io/badge/Library-OpenGL-green.svg)
-
-
-## Problem Statements
+# Problem Statements
 
 Some generic GVC codes are present in the Extra_Codes directory, apart from them, we have taken some specific problems and with the following problem statements:
 
@@ -54,7 +22,7 @@ Some generic GVC codes are present in the Extra_Codes directory, apart from them
 
 ## Instructions to run:
 We need to run the files using gcc/g++ using some extra parameters while passing to the gcc compiler.
-Run the following commands for the respective files
+Run the following commands for the respective files:
 
 gcc Answer1.c -lGL -lGLU -lglut </br>
 ./a.out</br>
@@ -64,11 +32,3 @@ gcc Answer5.c -lGL -lGLU -lglut</br>
 ./a.out</br>
 g++ Answer10.cpp -lGL -lGLU -lglut</br>
 ./a.out</br>
-
-### About OpenGL:
-The OpenGL Utility Toolkit is a library of utilities for OpenGL programs, which primarily perform system-level I/O with the host operating system. Functions performed include window definition, window control, and monitoring of keyboard and mouse input.
-
-Routines for drawing a number of geometric primitives (both in solid and wireframe mode) are also provided, including cubes, spheres and the Utah teapot. GLUT also has some limited support for creating pop-up menus
-
-
-[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/Naereen/)
