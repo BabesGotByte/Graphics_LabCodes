@@ -51,7 +51,7 @@ Some generic GVC codes are present in the Extra_Codes directory, apart from them
 (d)Use transformation to create a set of 10 random sized, random located flowers.</br>
 9. Write a program to extrude following 3D shapes from basic 2D shapes: A Cylinder of height (Y axis) 5H from a circle of radius R. Calculate 48 points. At h=0H, 1H, 2H, 3H, 4H and 5H   for angle=0,45,90,135,180,225,270 and 315. Don't use inbuilt function to render the cylinder. Draw curved lines to connect the points. Implement Curved line function of your own using bezier curves.</br>
 10. Write a program to implement a 3D fractal tree. Color of tree can be changed by pressing first letter of common colors(Red,Blue,Green,Yellow..). Use mouse movement to rotate tree along Y axis(on XZ plane). </br>
-11. Write a program to draw an animated teapot, also try to rotate it in the 3D place.
+11. Write a program to draw an animated teapot, also try to rotate it in the 3D plane.
 
 ## Instructions to run:
 We need to run the files using gcc/g++ using some extra parameters while passing to the gcc compiler.
