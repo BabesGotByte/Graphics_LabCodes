@@ -59,6 +59,8 @@ Run the following commands for the respective files
 
 gcc Answer1.c -lGL -lGLU -lglut </br>
 ./a.out</br>
+gcc Answer2.c -lGL -lGLU -lglut </br>
+./a.out</br>
 gcc Answer3a.c -lGL -lGLU -lglut -lm</br>
 ./a.out</br>
 gcc Answer5.c -lGL -lGLU -lglut</br>
