@@ -86,19 +86,29 @@ static void key(unsigned char key, int x, int y)
     switch (key)
     {
         case 'r': 
+				r = 1.0f;
+				g = 0.0f;
+				b = 0.0f;
+				break;
+        case 'g': 
+				r = 0.0f;
+				g = 1.0f;
+				b = 0.0f;
+				break;
+        case 'b':
+				r = 0.0f;
+				g = 0.0f;
+				b = 1.0f;
+				break;
+		case 'y':
+				r = 1.0f;
+				g = 1.0f;
+				b = 0.0f;
+				break;
+		case 'p':
 				r = 0.47f;
 				g = 0.0f;
 				b = 0.74f;
-				break;
-        case 'g': 
-				r = 0.341f;
-				g = 0.0f;
-				b = 0.494f;
-				break;
-        case 'b':
-				r = 0.035f;
-				g = 0.0f;
-				b = 0.341f;
 				break;
         case 'q':
             exit(0);
