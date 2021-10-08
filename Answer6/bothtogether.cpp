@@ -9,7 +9,7 @@ int noofclicks = 0;
 
 float fillColor[3] = {0.4, 0.0, 0.0};
 float borderColor[3] = {0.0, 0.0, 0.0};
-float defaultcolor[3] = {0.6, 0.8, 0.1};
+float defaultColor[3] = {0.6, 0.8, 0.1};
 
 void display()
 {
@@ -56,17 +56,17 @@ void boundaryFill(int x, int y, float fillColor[3], float borderColor[3]) //Chec
 	}
 }
 
-void floodFill(int x, int y, float defaultcolor[3], float fillColor[3])
+void floodFill(int x, int y, float defaultColor[3], float fillColor[3])
 {
 	float interiorColor[3];
 	getPixel(x, y, interiorColor);
-	if (interiorColor[0] == defaultcolor[0] and interiorColor[1] == defaultcolor[1] and interiorColor[2] == defaultcolor[2]) //checking if the pixel is the default color pixel.
+	if (interiorColor[0] != defaultColor[0] and interiorColor[1] != defaultColor[1] and interiorColor[2] != defaultColor[2]) //checking if the pixel is the default color pixel.
 	{
 		putPixel(x, y, fillColor);
-		floodFill(x + 1, y, defaultcolor, fillColor);
-		floodFill(x, y + 1, defaultcolor, fillColor);
-		floodFill(x - 1, y, defaultcolor, fillColor);
-		floodFill(x, y - 1, defaultcolor, fillColor);
+		floodFill(x + 1, y, defaultColor, fillColor);
+		floodFill(x, y + 1, defaultColor, fillColor);
+		floodFill(x - 1, y, defaultColor, fillColor);
+		floodFill(x, y - 1, defaultColor, fillColor);
 	}
 	return;
 }
@@ -130,7 +130,7 @@ void mouse(int btn, int state, int x, int y)
 				float xc = (p1.x + p2.x + p3.x + p4.x + p5.x) / 5; //We are beginning coloring from the centroid of the polygon.
 				float yc = (p1.y + p2.y + p3.y + p4.y + p5.y) / 5;
 				boundaryFill(xc, yc, fillColor, borderColor);
-				floodFill(xc, yc, fillColor, borderColor);
+				floodFill(xc, yc, defaultColor, fillColor);
 				break;
 			}
 		}
@@ -141,7 +141,7 @@ int main (int argc, char** argv)
 {
 	glutInit(&argc, argv);
 	glutInitWindowSize(wtemp, htemp);
-	glutCreateWindow("Border Fill and then Flood fill");
+	glutCreateWindow("Boundary Fill and Flood fill");
 	gluOrtho2D(0.0, (GLdouble)wtemp, 0.0, (GLdouble)htemp);
 	glutDisplayFunc(display);
 	glutMouseFunc(mouse);

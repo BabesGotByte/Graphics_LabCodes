@@ -9,11 +9,11 @@ int noofclicks = 0;
 
 float fillColor[3] = {0.4, 0.0, 0.0};
 float borderColor[3] = {0.0, 0.0, 0.0};
-float defaultcolor[3] = {0.6, 0.8, 0.1};
+float defaultColor[3] = {0.6, 0.8, 0.1};
 
 void display()
 {
-	glClearColor(0.4, 0.0, 0.0, 0.1);
+	glClearColor(0.6, 0.8, 0.1, 0.1);
 	glColor3f(1.0, 0.0, 0.0);
 	glClear(GL_COLOR_BUFFER_BIT);
 	glFlush();
@@ -40,33 +40,17 @@ void getPixel(int x, int y, float pixels[3])
 	glReadPixels(x, y, 1.0, 1.0, GL_RGB, GL_FLOAT, pixels);
 }
 
-void boundaryFill(int x, int y, float fillColor[3], float borderColor[3]) //Checking if we have reached the boundary or the pixel has been filled.
+void floodFill(int x, int y, float defaultColor[3], float fillColor[3])
 {
 	float interiorColor[3];
 	getPixel(x, y, interiorColor);
-
-	if ((interiorColor[0] != borderColor[0]) && (interiorColor[1] != borderColor[1]) && (interiorColor[2] != borderColor[2]) &&
-	        (interiorColor[0] != fillColor[0]) && (interiorColor[1] != fillColor[1]) && (interiorColor[2] != fillColor[2]))
+	if (interiorColor[0] != fillColor[0] && interiorColor[1] != fillColor[1] && interiorColor[2] != fillColor[2]) //checking if the pixel is the default color pixel.
 	{
 		putPixel(x, y, fillColor);
-		boundaryFill(x + 1, y, fillColor, borderColor);
-		boundaryFill(x - 1, y, fillColor, borderColor);
-		boundaryFill(x, y + 1, fillColor, borderColor);
-		boundaryFill(x, y - 1, fillColor, borderColor);
-	}
-}
-
-void floodFill(int x, int y, float defaultcolor[3], float fillColor[3])
-{
-	float interiorColor[3];
-	getPixel(x, y, interiorColor);
-	if (interiorColor[0] == defaultcolor[0] and interiorColor[1] == defaultcolor[1] and interiorColor[2] == defaultcolor[2]) //checking if the pixel is the default color pixel.
-	{
-		putPixel(x, y, fillColor);
-		floodFill(x + 1, y, defaultcolor, fillColor);
-		floodFill(x, y + 1, defaultcolor, fillColor);
-		floodFill(x - 1, y, defaultcolor, fillColor);
-		floodFill(x, y - 1, defaultcolor, fillColor);
+		floodFill(x + 1, y, defaultColor, fillColor);
+		floodFill(x, y + 1, defaultColor, fillColor);
+		floodFill(x - 1, y, defaultColor, fillColor);
+		floodFill(x, y - 1, defaultColor, fillColor);
 	}
 	return;
 }
@@ -129,8 +113,7 @@ void mouse(int btn, int state, int x, int y)
 				drawpolygon(p1, p2, p3, p4, p5);
 				float xc = (p1.x + p2.x + p3.x + p4.x + p5.x) / 5; //We are beginning coloring from the centroid of the polygon.
 				float yc = (p1.y + p2.y + p3.y + p4.y + p5.y) / 5;
-				// boundaryFill(xc, yc, fillColor, borderColor);
-				floodFill(xc, yc, fillColor, borderColor);
+				floodFill(xc, yc, defaultColor, fillColor);
 				break;
 			}
 		}
