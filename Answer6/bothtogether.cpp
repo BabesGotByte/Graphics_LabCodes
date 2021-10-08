@@ -60,7 +60,7 @@ void floodFill(int x, int y, float defaultColor[3], float fillColor[3])
 {
 	float interiorColor[3];
 	getPixel(x, y, interiorColor);
-	if (interiorColor[0] == defaultColor[0] and interiorColor[1] == defaultColor[1] and interiorColor[2] == defaultColor[2]) //checking if the pixel is the default color pixel.
+	if (interiorColor[0] != defaultColor[0] and interiorColor[1] != defaultColor[1] and interiorColor[2] != defaultColor[2]) //checking if the pixel is the default color pixel.
 	{
 		putPixel(x, y, fillColor);
 		floodFill(x + 1, y, defaultColor, fillColor);
